@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
 
+/* for chat screen */
 .chat-container {
   width: 90%;
   height: 95vh;
@@ -11,14 +12,14 @@
   color: white;
  font-family: 'Rationale', sans-serif;
 
-  border: 2px solid #ffc107; /* thin yellow border */
+  border: 2px solid #ffc107; 
   border-radius: 12px;
   box-sizing: border-box;
-  padding: 12px; /* gap inside container */
+  padding: 12px; 
 }
 
 .chat-title {
-  font-size: 32px;
+  font-size: 36px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -26,7 +27,16 @@
   color: #ffc107;
   letter-spacing: 2px;
 }
-
+.chat-subtitle {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+/* for messages  */
 .messages-area {
   flex: 1;
   overflow-y: auto;
@@ -37,7 +47,7 @@
   background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
 
-  margin-bottom: 12px; /* gap between chat area and input field */
+  margin-bottom: 12px; 
 }
 
 .messages-area::-webkit-scrollbar {
@@ -108,17 +118,17 @@
 .input-area {
   display: flex;
   gap: 10px;
-  padding: 0; /* remove dark background padding */
-  background: transparent; /* remove dark square behind input */
-  border-top: none;         /* no top border */
-  height: auto;             /* let input height control it */
+  padding: 0; 
+  background: transparent; 
+  border-top: none;         
+  height: auto;             
   box-sizing: border-box;
 }
 
 .chat-input {
   flex: 1;
   padding: 12px;
-  background: #111;         /* input field background only */
+  background: #111;         
   border: 1px solid #ffc107;
   border-radius: 10px;
   color: white;
@@ -141,7 +151,7 @@
   width: 100px;
   height: 70px;
   border: none;
-  background: transparent; /* no dark square */
+  background: transparent; 
   border-radius: 10px;
   display: flex;
   justify-content: center;

@@ -10,10 +10,6 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
-# Debug: Print to verify the key is loaded
-print(f"API Key loaded: {GEMINI_API_KEY[:20] if GEMINI_API_KEY else 'None'}...")
-print(f"API Key length: {len(GEMINI_API_KEY) if GEMINI_API_KEY else 0}")
-print(f"Model: {GEMINI_MODEL}")
 
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY not found in environment variables.")
