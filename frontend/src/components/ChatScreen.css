@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+
 .chat-container {
   width: 90%;
   height: 95vh;
@@ -7,7 +9,12 @@
   background-size: cover;
   background-position: center;
   color: white;
-  font-family: Orbitron, sans-serif;
+ font-family: 'Rationale', sans-serif;
+
+  border: 2px solid #ffc107; /* thin yellow border */
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 12px; /* gap inside container */
 }
 
 .chat-title {
@@ -19,6 +26,7 @@
   color: #ffc107;
   letter-spacing: 2px;
 }
+
 .messages-area {
   flex: 1;
   overflow-y: auto;
@@ -28,15 +36,19 @@
   gap: 14px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
+
+  margin-bottom: 12px; /* gap between chat area and input field */
 }
 
 .messages-area::-webkit-scrollbar {
   width: 6px;
 }
+
 .messages-area::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 4px;
 }
+
 .message-row {
   display: flex;
   align-items: flex-start;
@@ -52,7 +64,6 @@
   flex-direction: row;  
   gap: 10px;
 }
-
 
 .pfp {
   width: 38px;
@@ -82,6 +93,7 @@
   border-radius: 18px 18px 6px 18px;
   animation: slideRight 0.25s ease;
 }
+
 @keyframes slideLeft {
   from { transform: translateX(-20px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
@@ -92,30 +104,27 @@
   to { transform: translateX(0); opacity: 1; }
 }
 
+/* --------- Input field styling --------- */
 .input-area {
   display: flex;
   gap: 10px;
-  padding: 12px;
-  background: #000;
-  border-top: 1px solid #333;
-
-  height: 70px;        
+  padding: 0; /* remove dark background padding */
+  background: transparent; /* remove dark square behind input */
+  border-top: none;         /* no top border */
+  height: auto;             /* let input height control it */
   box-sizing: border-box;
 }
-
 
 .chat-input {
   flex: 1;
   padding: 12px;
-  background: #111;
+  background: #111;         /* input field background only */
   border: 1px solid #ffc107;
   border-radius: 10px;
   color: white;
   font-family: Orbitron, sans-serif;
-  
   resize: none;
-  height: 100%;            
-  overflow-y: auto;       
+  min-height: 50px;
   line-height: 1.4;
 }
 
@@ -124,16 +133,15 @@
   box-shadow: 0 0 8px #ffc107;
 }
 
-
 .chat-input::placeholder {
   color: #777;
 }
 
 .send-btn {
   width: 100px;
-  height: 60px;
+  height: 70px;
   border: none;
-  background: #111;
+  background: transparent; /* no dark square */
   border-radius: 10px;
   display: flex;
   justify-content: center;
