@@ -205,14 +205,6 @@ By default, `main.py` allows requests from `http://localhost:3000`. Update `allo
 - **Metadata**: Add chunk metadata (title/source/page) for LLM citation capabilities
 - **FAISS Optimization**: Use vector quantization or IVF for very large vectorstores
 
-## Quick Viva Statements
-
-**English (30s):**
-"This project implements a Retrieval-Augmented Generation pipeline. We preprocess the lorebook into overlapping chunks, create vector embeddings with SentenceTransformer, store them in a FAISS index, and at runtime retrieve the top-k chunks for a query. The retrieved chunks plus the user's question are sent to an LLM via ask_gemini() to produce grounded answers. The backend is a FastAPI app exposing /ask and /health."
-
-**Hinglish (30s):**
-"Yeh project RAG pipeline use karta hai. Pehle lorebook ko chunks me todte hain, har chunk ka embedding banate hain aur FAISS me store karte hain. Runtime pe user ka question aane par retriever top-k relevant chunks lata hai. Yeh chunks aur question LLM ko diye jate hain ask_gemini() se aur grounded answer return hota hai. Backend FastAPI se /ask aur /health endpoints provide karta hai."
-
 ## Useful Commands
 
 ```bash
